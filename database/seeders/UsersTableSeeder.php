@@ -16,14 +16,13 @@ class UsersTableSeeder extends Seeder
     {
         $users = [] ;
         $faker = factory::create();
-        $i;
 
         for($i = 1; $i <= 10; $i++){
             $users [] = [
                 'name'              => $faker->name, 
                 'user_role'         => $faker->randomElement($array = array('admin', 'customer')),
                 'email'             => $faker-> email,
-                'email_verified_at' => $faker->dataTime(),
+                'email_verified_at' => $faker->dateTime(),
                 'password'          => $faker -> password 
             ];
         }
